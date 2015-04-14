@@ -19,7 +19,9 @@ class Client extends BaseClient
     {
         $params = array(
             'url' => $request->getUri(),
-            'headers' => $this->headers
+            'headers' => $this->headers,
+            'method' => $request->getMethod(),
+            'params' => $request->getParameters()
         );
 
         $cmd = "phantomjs " . __DIR__ . "/phantomjs/basic.js " . base64_encode(json_encode($params));

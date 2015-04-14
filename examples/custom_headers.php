@@ -14,8 +14,13 @@ $client->setHeaders(array(
 
 $client->addHeader('key3', 'val3');
 
+$params = array(
+    'param1' => 'val1',
+    'param2' => 'val2',
+);
+
 /* @var Crawler $crawler */
-$crawler = $client->request('GET', 'http://www.google.com');
+$crawler = $client->request('POST', 'http://chinaprices.ru/dev/test_request.php', $params);
 
 /* @var \Symfony\Component\BrowserKit\Response $response */
 $response = $client->getResponse();

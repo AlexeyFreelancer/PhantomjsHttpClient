@@ -6,6 +6,10 @@ var params = JSON.parse(base64.decode(system.args[1]));
 
 page.customHeaders = params.headers;
 
+// TODO
+// method = params.method
+// get/post params = params.params
+
 page.open(params.url, function(status) {
     var result = {status: status};
     if(status === "success") {
