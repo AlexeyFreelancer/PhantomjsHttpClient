@@ -1,9 +1,12 @@
 var system = require('system');
+var base64 = require('base-64');
 var page = require('webpage').create();
 
-var url = system.args[1];
+var params = JSON.parse(base64.decode(system.args[1]));
 
-page.open(url, function(status) {
+page.customHeaders = params.headers;
+
+page.open(params.url, function(status) {
     var result = {status: status};
     if(status === "success") {
         result.content = page.content;
