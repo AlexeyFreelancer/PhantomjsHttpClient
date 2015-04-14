@@ -1,0 +1,21 @@
+{
+    "name": "AlexeyFreelancer/PhantomjsHttpClient",
+    "type": "application",
+    "description": "A simple PHP Http Client based on PhantomJS",
+    "homepage": "https://github.com/AlexeyFreelancer/PhantomjsHttpClient",
+    "authors": [
+        {
+            "name": "Alexey Freelancer",
+            "email": "alexey.freelancer@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/browser-kit": "~2.1",
+        "symfony/css-selector": "~2.1",
+        "symfony/dom-crawler": "~2.1"
+    },
+    "autoload": {
+        "psr-4": { "PhantomjsHttpClient\\": "PhantomjsHttpClient" }
+    }
+}
