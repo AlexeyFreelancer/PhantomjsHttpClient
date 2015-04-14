@@ -8,12 +8,12 @@ use Symfony\Component\DomCrawler\Crawler;
 $client = new Client();
 
 /* @var Crawler $crawler */
-$crawler = $client->request('GET', 'http://www.chinaprices.ru');
+$crawler = $client->request('GET', 'http://www.google.com');
 
 /* @var \Symfony\Component\BrowserKit\Response $response */
 $response = $client->getResponse();
 
-var_dump($response->getStatus(), $response->getHeaders(), strlen((string) $response->getContent()));
+var_dump($response->getStatus(), $response->getHeaders(), (string) $response->getContent());
 
 
 
